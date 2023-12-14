@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.10)
 
 
+# Set used languages to support assembler build as well.
+enable_language(CXX C ASM)
+
 # Initialize lists.
 set(CRASHHANDLER_HEADERS "" PARENT_SCOPE)
 set(CRASHHANDLER_SOURCES "" PARENT_SCOPE)
