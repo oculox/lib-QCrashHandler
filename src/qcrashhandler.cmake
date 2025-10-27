@@ -125,3 +125,8 @@ elseif (UNIX)
 else ()
     message(FATAL_ERROR "Platform isn't supported")
 endif ()
+
+set_source_files_properties(
+    ${CMAKE_CURRENT_LIST_DIR}/../deps/breakpad.git/src/common/linux/breakpad_getcontext.S
+    PROPERTIES COMPILE_FLAGS "-Wa,--noexecstack"
+)
